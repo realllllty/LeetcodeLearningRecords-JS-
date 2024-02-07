@@ -20,6 +20,8 @@ Trie.prototype.insert = function (word) {
   // 一个一个看当前的字母在当前root下有没有对应的
   for (const c of word) {
     // 如果在这一层没有对应的字母(创建一个新的对象)
+    // Object.create(null)用于创建一个干净的对象, 这个对象完全没有继承自Object,prototype的属性或者是方法, 因此不包含toString等默认存在于普通对象的方法
+    // 通常被用于创建一个纯净的字典对象
     if (!node[c]) node[c] = Object.create(null);
     // node指向下一层
     node = node[c];
