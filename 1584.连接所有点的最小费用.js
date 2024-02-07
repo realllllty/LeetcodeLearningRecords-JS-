@@ -9,8 +9,5 @@
  * @param {number[][]} points
  * @return {number}
  */
-var minCostConnectPoints = function(points) {
-
-};
+var minCostConnectPoints = function (points) {};
 // @lc code=end
-
