@@ -14,11 +14,12 @@ var searchMatrix = function(matrix, target) {
   let flatMatrix = [];
   let res = false;
   // 扁平化matrix数组
-  matrix.forEach((item) => {
-    item.forEach((initem) => {
-      flatMatrix.push(initem);
-    })
-  })
+  // matrix.forEach((item) => {
+  //   item.forEach((initem) => {
+  //     flatMatrix.push(initem);
+  //   })
+  // })
+  flatMatrix = matrix.flat();
   // 对处理数组实行二分查找
   let left = 0;
   let right = flatMatrix.length - 1;
