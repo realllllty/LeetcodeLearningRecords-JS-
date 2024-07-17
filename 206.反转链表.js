@@ -16,5 +16,23 @@
  * @param {ListNode} head
  * @return {ListNode}
  */
-var reverseList = function (head) {};
+var reverseList = function (head) {
+  let res = {};
+  let cur = head;
+  let pre = {};
+  while (cur.next) {
+    res = cur;
+    let temp = cur.next;
+    // 将当前指针的next反转
+    cur.next = pre;
+    // 前移指针
+    pre = cur;
+    cur = temp;
+  }
+  return res;
+};
 // @lc code=end
+
+// @after-stub-for-debug-begin
+module.exports = reverseList;
+// @after-stub-for-debug-end

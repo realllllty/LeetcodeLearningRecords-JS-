@@ -10,7 +10,7 @@
  * @return {string[]}
  */
 var letterCombinations = function(digits) {
-
+  digits.
 };
 // @lc code=end
 
