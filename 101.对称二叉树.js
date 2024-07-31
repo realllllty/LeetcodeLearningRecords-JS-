@@ -32,6 +32,7 @@ function Compare(leftNode, rightNode) {
     } else if (leftNode.val !== rightNode.val) {
         return false;
     } else if (leftNode.val === rightNode.val) {
+        // 递归点
         return Compare(leftNode.left, rightNode.right) && Compare(leftNode.right, rightNode.left);
     }
 }
