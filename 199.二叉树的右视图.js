@@ -18,7 +18,8 @@
  * @return {number[]}
  */
 var rightSideView = function(root) {
-    // 层序遍历
+    // 层序遍历, 给出每一层最右边的那个数
+    
     
 };
 // @lc code=end
