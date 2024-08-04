@@ -8,3 +8,4 @@ https://github.com/Geekhyt/javascript-leetcode
 
 # 刷题相关Note
 - 刷过的题按照类型进行分类, 题目完成过后附上做题的相关心得
+- 也需要在一定程度上重视算法的复杂度, 参考他人的优秀解法

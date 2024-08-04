@@ -17,19 +17,22 @@
  * @return {ListNode}
  */
 var reverseList = function (head) {
-  let res = {};
-  let cur = head;
-  let pre = {};
-  while (cur.next) {
-    res = cur;
-    let temp = cur.next;
-    // 将当前指针的next反转
-    cur.next = pre;
-    // 前移指针
-    pre = cur;
-    cur = temp;
+  // 感觉还是通过栈这种形式更加简单易懂啊, 操作指针转来转去有点恼火
+  let stack = [];
+
+  while (head) {
+    stack.unshift(head);
+    head = head.next;
   }
-  return res;
+
+  for (let i = 0; i < stack.length; i++) {
+    if (stack[i + 1]) {
+      stack[i].next = stack[i + 1];
+    } else {
+      stack[i].next = null;
+    }
+  }
+  return stack[0] ?? null;
 };
 // @lc code=end
 
