@@ -18,21 +18,21 @@
  * @return {ListNode}
  */
 var detectCycle = function (head) {
-  let obj = {};
-  let cur = 0;
-  let pos = -1;
-  while (head.next !== null) {
-    // 当前对应值在表当中是否存在
-    if (obj[head.value]) {
-      pos = obj[head.value];
-      break;
+  let record = new Map();
+  let cur = head;
+  while (cur) {
+    if (!record.has(cur)) {
+        record.set(cur, 1);
     } else {
-      obj[head.value] = cur;
-      cur++;
-      head = head.next;
+        return cur;
     }
+    cur = cur.next;
   }
-  return pos;
+  return null;
 };
 // @lc code=end
 
+
+// @after-stub-for-debug-begin
+module.exports = detectCycle;
+// @after-stub-for-debug-end
