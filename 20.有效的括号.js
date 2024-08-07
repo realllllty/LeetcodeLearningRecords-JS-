@@ -10,6 +10,8 @@
  * @return {boolean}
  */
 var isValid = function(s) {
+    // 1. 使用switch…case结构的情况下一定需要注意break的使用, 如果不主动使用break, 后续的case代码会继续执行
+    // 2. 使用Array.prototype.map或者是forEach需要注意内部return值, 不再是针对外层函数的return了
     let stack = [];
     let arr = s.split('');
     for (let i = 0; i < arr.length; i++) {
