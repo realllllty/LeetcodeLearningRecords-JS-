@@ -1,4 +1,4 @@
-# Leetcode-JS-learn
+# Leetcode-JS-Learn
 
 # 操作流程
 每次需要刷题的时候, 统一先执行一遍 git pull 获取最新代码, 同步其他设备的刷题记录
