@@ -36,6 +36,9 @@ var canJump = function (nums) {
     }
   }
   return res;
+  // 问题:
+  // 1. 没有注意到最后一项为0的情况, 最后一项为0, 只需要到达不需要超过
+  // 2. 长度为1和第一项为0的边缘case没有注意
 };
 // @lc code=end
 
