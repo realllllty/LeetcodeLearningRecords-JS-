@@ -28,7 +28,7 @@ var searchInsert = function(nums, target) {
         const mid = Math.floor((left + right) / 2);
         if (nums[mid] < target) {
             left = mid + 1;
-        } else { // nums[mid] >= target, 保证了右指针的有房都是大于等于target的
+        } else { // nums[mid] >= target, 保证了右指针的右方都是大于等于target的
             right = mid - 1;
         }
     }
